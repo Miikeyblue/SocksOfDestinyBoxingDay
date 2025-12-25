@@ -742,11 +742,17 @@ resetGameBtn.addEventListener("click", () => {
   renderTurnRemaining();
 });
 
-cogBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
+let lastDrawerToggle = 0;
+function toggleDrawer(e){
+  const now = Date.now();
+  if(now - lastDrawerToggle < 350) return;
+  lastDrawerToggle = now;
+  try{ e && e.preventDefault && e.preventDefault(); }catch(_){}
+  try{ e && e.stopPropagation && e.stopPropagation(); }catch(_){}
   drawer.classList.toggle("show");
   renderPlayers();
-});
+}
+cogBtn.addEventListener("pointerdown", toggleDrawer, {passive:false});
 
 document.addEventListener("click", (e) => {
   if (!drawer.classList.contains("show")) return;

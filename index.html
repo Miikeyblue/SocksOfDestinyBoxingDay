@@ -10,7 +10,7 @@
 h1{margin:8px 0 6px;font-size:28px;letter-spacing:.4px;} .tag{color:var(--muted);font-weight:900;line-height:1.35;}
 .tap{margin-top:14px;display:flex;gap:10px;align-items:center;justify-content:center;color:rgba(255,255,255,.86);font-weight:1000;}
 .blink{display:inline-block;width:10px;height:18px;background:rgba(255,255,255,.9);border-radius:4px;margin-left:6px;animation:blink .9s steps(1) infinite;vertical-align:middle;} @keyframes blink{50%{opacity:0;}}
-.topBar{position:fixed;top:10px;left:0;right:0;display:flex;justify-content:flex-end;align-items:center;padding:0 14px;pointer-events:none;}
+.topBar{position:fixed;top:10px;left:0;right:0;display:flex;justify-content:flex-end;align-items:center;padding:0 14px;pointer-events:none;z-index:9999;}
 .cog{pointer-events:auto;width:44px;height:44px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(0,0,0,.25);color:#fff;font-weight:1000;font-size:18px;display:flex;align-items:center;justify-content:center;}
 .wheelLayout{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding-bottom:env(safe-area-inset-bottom);}
 .wheelWrap{width:min(560px,92vw);aspect-ratio:1/1;position:relative;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);border-radius:999px;box-shadow:0 14px 40px rgba(0,0,0,.55);overflow:hidden;}
@@ -35,7 +35,7 @@ canvas{width:100%;height:100%;display:block;} .pointer{position:absolute;top:6px
 .choices{display:grid;gap:10px;margin-top:12px;} .choiceBtn{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;border-radius:16px;padding:12px 12px;font-weight:1000;text-align:left;}
 .choiceBtn.correct{border-color:rgba(125,255,178,.55);background:rgba(125,255,178,.16);} .choiceBtn.wrong{border-color:rgba(255,77,77,.55);background:rgba(255,77,77,.16);}
 .postTrivia{display:none;margin:12px 16px 0;padding:14px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.30);} .postTrivia.show{display:block;}
-.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px, 92vw);transform:translateX(105%);transition:transform .22s ease;background:rgba(0,0,0,.72);border-left:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px);padding:14px;overflow:auto;-webkit-overflow-scrolling:touch;}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px, 92vw);transform:translateX(105%);transition:transform .22s ease;background:rgba(0,0,0,.72);border-left:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px);padding:14px;overflow:auto;-webkit-overflow-scrolling:touch;z-index:9998;}
 .drawer.show{transform:translateX(0);} .drawer h2{margin:8px 0 8px;font-size:18px;font-weight:1100;}
 .field{display:flex;gap:8px;margin:8px 0;} .input{flex:1;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;border-radius:14px;padding:10px 10px;font-weight:900;}
 .list{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;} .tagP{padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);font-weight:900;cursor:pointer;user-select:none;}
@@ -89,4 +89,4 @@ canvas{width:100%;height:100%;display:block;} .pointer{position:absolute;top:6px
 <div class="list" id="playerTags"></div>
 <div style="margin-top:12px;"><button class="btn alt" id="resetGameBtn" type="button">Hard Reset Game</button></div></div>
 
-<script src="app.js?v=v9"></script></body></html>
+<script src="app.js?v=v9a"></script></body></html>

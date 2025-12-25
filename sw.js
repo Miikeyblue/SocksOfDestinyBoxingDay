@@ -1,4 +1,4 @@
-const CACHE_NAME="sod-full-v14-rs-replay";
+const CACHE_NAME = "sod-boxingday-v27-configfix1";
 const ASSETS=[
   "./","./index.html","./app.js","./manifest.json","./logo.png",
   "./sounds/dice.wav","./sounds/steal.wav","./sounds/impact.wav","./sounds/banker.wav","./sounds/timer.wav",
