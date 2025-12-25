@@ -35,6 +35,10 @@ canvas{width:100%;height:100%;display:block;} .pointer{position:absolute;top:6px
 .choices{display:grid;gap:10px;margin-top:12px;} .choiceBtn{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;border-radius:16px;padding:12px 12px;font-weight:1000;text-align:left;}
 .choiceBtn.correct{border-color:rgba(125,255,178,.55);background:rgba(125,255,178,.16);} .choiceBtn.wrong{border-color:rgba(255,77,77,.55);background:rgba(255,77,77,.16);}
 .postTrivia{display:none;margin:12px 16px 0;padding:14px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.30);} .postTrivia.show{display:block;}
+.slotBox{margin-top:8px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);border-radius:18px;overflow:hidden;}
+.slotRow{padding:10px 12px;font-weight:1100;letter-spacing:.2px;opacity:.78;border-top:1px solid rgba(255,255,255,.10);}
+.slotRow:first-child{border-top:0;}
+.slotRow.mid{opacity:1;background:rgba(125,255,178,.14);border-top-color:rgba(125,255,178,.22);}
 .drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px, 92vw);transform:translateX(105%);transition:transform .22s ease;background:rgba(0,0,0,.72);border-left:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px);padding:14px;overflow:auto;-webkit-overflow-scrolling:touch;z-index:9998;}
 .drawer.show{transform:translateX(0);} .drawer h2{margin:8px 0 8px;font-size:18px;font-weight:1100;}
 .field{display:flex;gap:8px;margin:8px 0;} .input{flex:1;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;border-radius:14px;padding:10px 10px;font-weight:900;}
@@ -77,6 +81,24 @@ canvas{width:100%;height:100%;display:block;} .pointer{position:absolute;top:6px
   <div id="roundEndList" class="list" style="margin:8px 0 10px;"></div>
   <div class="btnRow" style="width:100%;margin-top:10px;">
     <button class="btn primary" id="roundEndConfirm" type="button">Confirm</button>
+  </div>
+</div>
+
+
+<div class="postTrivia" id="gameOver" style="display:none;">
+  <div style="font-weight:1100;margin-bottom:8px;">Game over.</div>
+  <div class="small" style="margin-bottom:10px;">Nobody’s continuing. Press below to reset and start again.</div>
+  <div class="btnRow" style="width:100%;margin-top:10px;">
+    <button class="btn primary" id="playAgainBtn" type="button">Press to play again</button>
+  </div>
+</div>
+
+
+<div class="postTrivia" id="gameOver" style="display:none;">
+  <div style="font-weight:1100;margin-bottom:8px;">Everyone chose to leave. Game over. 🎁</div>
+  <div class="small" style="margin-bottom:10px;">Press the button to play again. This hard resets everything.</div>
+  <div class="btnRow" style="width:100%;margin-top:10px;">
+    <button class="btn primary" id="playAgainBtn" type="button">Press to play again</button>
   </div>
 </div>
 
